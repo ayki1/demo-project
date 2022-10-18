@@ -40,15 +40,15 @@ public class StepDefs {
     @Then("^I should see more results$")
     public void i_should_see_more_results() throws Throwable {
         Thread.sleep(2000);
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("search"));
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("seaarch"));
     }
 
     @After
     public void tearDown(Scenario scenario) {
-        /*if (scenario.isFailed()) {
+        if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
-        }*/
+        }
         Driver.closeDriver();
     }
 
